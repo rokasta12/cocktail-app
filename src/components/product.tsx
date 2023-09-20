@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /*
   This example requires some changes to your config:
   
@@ -62,10 +63,6 @@ const products = [
 	// More products...
 ];
 
-function classNames(...classes) {
-	return classes.filter(Boolean).join(" ");
-}
-
 export default function Example() {
 	return (
 		<div className="bg-white">
@@ -99,20 +96,7 @@ export default function Example() {
 									<p className="sr-only">
 										{product.rating} out of 5 stars
 									</p>
-									<div className="flex items-center">
-										{[0, 1, 2, 3, 4].map((rating) => (
-											<StarIcon
-												key={rating}
-												className={classNames(
-													product.rating > rating
-														? "text-yellow-400"
-														: "text-gray-200",
-													"h-5 w-5 flex-shrink-0"
-												)}
-												aria-hidden="true"
-											/>
-										))}
-									</div>
+									<div className="flex items-center"></div>
 									<p className="mt-1 text-sm text-gray-500">
 										{product.reviewCount} reviews
 									</p>
